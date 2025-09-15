@@ -2,11 +2,7 @@ import streamlit as st
 import pandas as pd
 import sys
 
-#lib_path = '/Users/luomein/Documents/code/Docker/PythonJobs/common/aws'
-#sys.path.append(lib_path)
 
-#import athena_basic
-#import aws_config
 import boto3
 import os
 from os import listdir
@@ -38,12 +34,12 @@ with st.expander("AWS Credential"):
 
 def set_confg_obj(athena_bucket_name , s3_download_bucket_replace_string , athena_database , athena_WorkGroup , boto3_session_obj ):
     confg = dict()
-    confg['athena_bucket_name'] = athena_bucket_name ## "ulink-ai-analysis" ## account1 , "qnap-prod-diskhealth-destination" ## account2
-    confg['s3_download_bucket_replace_string']  = s3_download_bucket_replace_string ##  's3://ulink-ai-analysis/' ### 
-    confg['athena_database']  = athena_database ## 'sampledb'
-    confg['athena_WorkGroup']  = athena_WorkGroup ## 'primary'
-    #confg['boto3_profile']  = boto3_profile ##'account1'
-    confg['boto3_session'] = boto3_session_obj ##boto3.Session(profile_name= boto3_profile )
+    confg['athena_bucket_name'] = athena_bucket_name 
+    confg['s3_download_bucket_replace_string']  = s3_download_bucket_replace_string
+    confg['athena_database']  = athena_database
+    confg['athena_WorkGroup']  = athena_WorkGroup
+    #confg['boto3_profile']  = boto3_profile 
+    confg['boto3_session'] = boto3_session_obj 
     
     return confg
 
