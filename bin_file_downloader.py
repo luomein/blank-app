@@ -9,7 +9,7 @@ import sys
 import os
 
 import athena_basic
-import aws_config
+#import aws_config
 
 
 def mkdir_if_not_exists(f):
